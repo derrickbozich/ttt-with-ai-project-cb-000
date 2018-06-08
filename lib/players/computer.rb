@@ -54,6 +54,13 @@ module Players
       @matrix.cells[input] == " " ? true : false
     end
 
+    def strategy_spot
+      spots = [4,0,2,6,8]
+      spots.find {|s| @matrix.cells[s] == " "  }
+      
+    
+    end
+
 
 
 
