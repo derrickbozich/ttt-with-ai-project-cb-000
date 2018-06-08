@@ -16,8 +16,8 @@ module Players
       elsif two_of_three(@opponent) && valid?(two_of_three(@opponent))
         puts "Blocking Move"
         input = two_of_three(@opponent)
-      # elsif self.valid?(self.strategy_spot)
-      #   input = self.strategy_spot
+      elsif self.valid?(self.strategy_spot)
+        input = self.strategy_spot
       end
 
 
