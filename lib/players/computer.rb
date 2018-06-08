@@ -57,7 +57,7 @@ module Players
     end
 
     def strategy_spot
-      spots = [4,0,2,6,8]
+      spots = [4,0,2,6,8].shuffle
       result = spots.find {|s| @matrix.cells[s] == " "  }
       result.to_i
 
