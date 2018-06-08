@@ -16,6 +16,8 @@ module Players
       elsif two_of_three(@opponent) && valid?(two_of_three(@opponent))
         puts "Blocking Move"
         input = two_of_three(@opponent)
+      elsif self.valid?(self.strategy_spot)
+        input = self.strategy_spot
       end
 
 
@@ -57,7 +59,7 @@ module Players
     def strategy_spot
       spots = [4,0,2,6,8]
       spots.find {|s| @matrix.cells[s] == " "  }
-      
+
     
     end
 
