@@ -59,7 +59,7 @@ module Players
     def strategy_spot
       spots = [4,0,2,6,8]
       result = spots.each {|s| @matrix.cells[s] == " "  }
-      result
+      result.to_i
 
     end
 
