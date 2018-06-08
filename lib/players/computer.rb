@@ -10,10 +10,10 @@ module Players
       input = board.cells.index(" ")
       if board.cells[4] == " "
         input = 4
-      elsif two_of_three(self) != nil && valid?(two_of_three(self))
+      elsif valid?(two_of_three(self))
         # binding.pry
         input = two_of_three(self)
-      elsif two_of_three(@opponent) && valid?(two_of_three(@opponent))
+      elsif valid?(two_of_three(@opponent))
         puts "Blocking Move"
         input = two_of_three(@opponent)
       elsif self.valid?(self.strategy_spot)
